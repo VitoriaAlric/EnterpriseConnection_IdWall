@@ -1,0 +1,228 @@
+@import '../theme.css';
+
+button,
+span,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+body {
+  background: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 0;
+}
+
+.sidebar .logo img {
+  max-width: 150px;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .main-menu {
+  list-style: none;
+  color: white;
+}
+
+.sidebar .main-menu li {
+  padding: 15px 40px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .main-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.sidebar .main-menu .active, .sidebar .main-menu .active:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.page-content{
+  width: calc(100vw - 350px);
+  margin-left: 350px;
+}
+
+.lastUpdate {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.card-status {
+  padding: 24px 16px;
+  border-radius: 5px;
+  height: 150px;
+
+  transition: background 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-status:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+.card-status .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-status .info svg {
+  font-size: 1.4rem;
+  color: var(--gray-200);
+}
+
+.card-status .info p {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--gray-200);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.card-status h2 {
+  color: var(--gray-200);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card-status.process {
+  background: var(--blue-500);
+}
+.card-status.ok {
+  background: var(--green-500);
+}
+.card-status.total {
+  background: var(--gray-700);
+}
+.card-status.warning {
+  background: var(--yellow-500);
+}
+
+.btn-report-file {
+  border: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 5px;
+  transition: background 0.1s;
+}
+
+.btn-report-file svg {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.btn-report-file:hover {
+  filter: brightness(0.8);
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.input-custom {
+  display: flex;
+  flex-direction: column;
+  background: var(--main-background);
+  border: 2px solid var(--gray-400);
+  position: relative;
+
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.input-custom label {
+  padding: 5px;
+  background: var(--main-background);
+  color: var(--gray-600);
+  font-size: 0.7rem;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.input-custom .content {
+  display: flex;
+  align-items: center;
+}
+
+.input-custom input {
+  background: var(--main-background);
+
+  font-size: 1.1rem;
+  padding: 15px 20px;
+  width: 100%;
+
+  border: none;
+}
+
+.input-custom input:focus,
+.input-custom input:hover {
+  border: none;
+  outline: none;
+}
+
+.input-custom svg {
+  font-size: 20px;
+  display: inline-block;
+  color: var(--gray-600);
+
+  position: absolute;
+  right: 17px;
+  pointer-events: none;
+}
+
+.table-section {
+  margin-top: 46px;
+}
+
+.table-title {
+  color: var(--secondary-color);
+}
+
+.table-section h2 {
+  padding: 15px 8px;
+
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.table-section .table tr,
+.table-section .table th,
+.table-section .table td {
+  font-family: 'Inter', sans-serif;
+}

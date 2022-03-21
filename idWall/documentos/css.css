@@ -1,0 +1,125 @@
+@import '../theme.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: var(--purple-100);
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+ol {
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-style: none;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: var(--blue-500);
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--blue-500);
+}
+
+h1 {
+  color: #828182;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+
+  background-color: var(--primary-color);
+  position: fixed;
+}
+
+.sidebar .logo img {
+  max-width: 150px;
+}
+
+.sidebar .main-menu {
+  list-style: none;
+  color: white;
+}
+
+.sidebar .main-menu li {
+  padding: 15px 40px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .main-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.sidebar .main-menu .active, .sidebar .main-menu .active:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+div.content {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.link-3,
+.link-2,
+.link-1,
+.link-4 {
+  width: 25%;
+}
+
+.link-1:hover {
+  border-top: 3px solid #b8c4f8;
+}
+
+.link-4:hover {
+  border-top: 3px solid black;
+}
+
+.link-3:hover {
+  border-top: 3px solid #b7e59f;
+}
+
+.link-2:hover {
+  border-top: 3px solid #faac1c;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

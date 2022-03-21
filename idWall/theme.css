@@ -1,0 +1,104 @@
+:root{
+    --primary-color: #50f;
+    --secondary-color: #fff;
+    --success-color: #52c41a;
+    --error-color: #f5222d;
+    --warning-color: #faad14;
+    --main-background: #fafafa;
+
+    --gray-50: #fff;
+    --gray-100: #fafafa;
+    --gray-200: #f5f5f5;
+    --gray-300: #e8e8e8;
+    --gray-400: #d9d9d9;
+    --gray-500: #bfbfbf;
+    --gray-600: #8c8c8c;
+    --gray-700: #595959;
+    --gray-800: #262626;
+    --gray-900: #000;
+
+    --blue-50: #f0f5ff;
+    --blue-100: #d6e4ff;
+    --blue-200: #adc6ff;
+    --blue-300: #85a5ff;
+    --blue-400: #597ef7;
+    --blue-500: #2f54eb;
+    --blue-600: #1d39c4;
+    --blue-700: #10239e;
+    --blue-800: #061178;
+    --blue-900: #030852;
+
+    --purple-50: #f3f2ff;
+    --purple-100: #c8c2ff;
+    --purple-200: #a491ff;
+    --purple-300: #8561ff;
+    --purple-400: #6b31ff;
+    --purple-500: #50f;
+    --purple-600: #4100cf;
+    --purple-700: #30009f;
+    --purple-800: #210070;
+    --purple-900: #130040;
+
+    --green-50: #f6ffed;
+    --green-100: #d9f7be;
+    --green-200: #b7eb8f;
+    --green-300: #95de64;
+    --green-400: #73d13d;
+    --green-500: #52c41a;
+    --green-600: #389e0d;
+    --green-700: #237804;
+    --green-800: #135200;
+    --green-900: #092b00;
+
+    --red-50: #fff1f0;
+    --red-100: #ffccc7;
+    --red-200: #ffa39e;
+    --red-300: #ff7875;
+    --red-400: #ff4d4f;
+    --red-500: #f5222d;
+    --red-600: #cf1322;
+    --red-700: #a8071a;
+    --red-800: #820014;
+    --red-900: #5c0011;
+
+    --yellow-50: #fffbe6;
+    --yellow-100: #fff1b8;
+    --yellow-200: #ffe58f;
+    --yellow-300: #ffd666;
+    --yellow-400: #ffc53d;
+    --yellow-500: #faad14;
+    --yellow-600: #d48806;
+    --yellow-700: #ad6800
+    --yellow-800: #874d00;
+    --yellow-900: #613400;
+}
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

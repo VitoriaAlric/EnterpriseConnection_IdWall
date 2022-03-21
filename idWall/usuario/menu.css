@@ -65,9 +65,12 @@
 .main-container {
     display: flex;
     flex-direction: column;
-    padding-left: 120px;
+    padding-left: 20px;
     padding-top: 60px;
     background-color: #fafafa;
+
+    width: calc(100vw - 350px);
+    margin-left: 350px;
 }
 .content {
     padding: 1rem 2rem;
@@ -83,4 +86,44 @@ header {
 button:hover path {
     color: #8561ff;
     transition: .2s;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+
+    background-color: var(--primary-color);
+    position: fixed;
+}
+
+.sidebar .logo img {
+    max-width: 150px;
+}
+
+.sidebar .main-menu {
+    list-style: none;
+    color: white;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar .main-menu li {
+    padding: 15px 40px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar .main-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.sidebar .main-menu .active, .sidebar .main-menu .active:hover {
+    background-color: white;
+    color: var(--primary-color);
 }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idwall</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="./idwall.jpeg" alt="logo imagem" style="width:100%;">
+    <a href="./home.html">Protocolos</a>
+    <a href="./documentos.html">Documentos</a>
+    <a class="active" href="usuarios.html">usuarios</a>
+    <a href="./font.html">Fontes</a>
+    <a href="mat.html">matrizes</a>
+    <a href="atri.html">atributos</a>
+    <a href="moni.html">monitor</a>
+    <a href="org.html">organizacoes</a>
+    <a href="leave.html">sair</a>
+  </div>
+
+  <div class="content p-3">
+    <main>
+      <div class="d-flex justify-content-center align-items-center flex-column p-3">
+        <h1 class="mt-5">Usuários</h1>
+        <div class="d-flex align-items-center justify-content-between mt-3" style="width:30%">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Filtro" aria-label="Username"
+              aria-describedby="basic-addon1" style="width:20%;">
+          </div>
+          <button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Listar</button>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-3 ms-5" style="width:80%">
+          <button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Adicionar</button>
+          <div class="form-check form-switch">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Listar somente usuários desativados</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          </div>
+        </div>
+
+        <table class="table mt-1 ms-5" style="width:80%;">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Cliente</th>
+              <th scope="col">Protocolos</th>
+              <th scope="col">Email</th>
+              <th scope="col">Acesso</th>
+              <th scope="col">Backoffice</th>
+              <th scope="col">IDNetwork</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td scope="row">Mark</td>
+              <td>0</td>
+              <td>mark@gmail.com</td>
+              <td>Sim</td>
+              <td>Nao</td>
+              <td>Nao</td>
+              <td><button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Logar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>0</td>
+              <td>jacob@gmail.com</td>
+              <td>Sim</td>
+              <td>Nao</td>
+              <td>Nao</td>
+              <td><button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Logar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Giovana</td>
+              <th>2</th>
+              <td>hihi@gmail.com</td>
+              <td>Sim</td>
+              <td>Nao</td>
+              <td>Nao</td>
+              <td><button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Logar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Robert</td>
+              <th>5</th>
+              <td>robert@gmail.com</td>
+              <td>Sim</td>
+              <td>Nao</td>
+              <td>Nao</td>
+              <td><button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Logar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Carlos</td>
+              <th>2</th>
+              <td>carlos@gmail.com</td>
+              <td>Sim</td>
+              <td>Nao</td>
+              <td>Nao</td>
+              <td><button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Logar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Ge</td>
+              <th>2</th>
+              <td>ge@gmail.com</td>
+              <td>Sim</td>
+              <td>Nao</td>
+              <td>Nao</td>
+              <td><button class="btn btn-info text-white" style="padding:0.5rem 2rem;">Logar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </main>
+  </div>
+
+
+
+</body>
+
+</html>

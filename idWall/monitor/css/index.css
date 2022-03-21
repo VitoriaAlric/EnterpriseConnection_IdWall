@@ -1,0 +1,223 @@
+@import '../../theme.css';
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+
+    background-color: var(--primary-color);
+    position: fixed;
+}
+
+.sidebar .logo img {
+    max-width: 150px;
+}
+
+.sidebar .main-menu {
+    list-style: none;
+    color: white;
+}
+
+.sidebar .main-menu li {
+    padding: 15px 40px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar .main-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.sidebar .main-menu .active, .sidebar .main-menu .active:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Page Content */
+.page-content {
+    width: calc(100vw - 350px);
+    margin-left: 350px;
+    height: 100vh;
+    background-color: var(--main-background); 
+}
+
+.page-content .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--gray-700);
+}
+
+.protocol-item {
+    cursor: pointer;
+    border-radius: 20px;
+    border-bottom: 2px solid var(--red-500);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgb(179 179 179);
+}
+
+.protocol-item:nth-child(1) {
+    border-color: var(--yellow-500);
+}
+
+.protocol-item:nth-child(2) {
+    border-color: var(--green-500);
+}
+
+.protocol-item:nth-child(3) {
+    border-color: var(--primary-color);
+}
+
+.protocol-item {
+    cursor: pointer;
+    border-radius: 20px;
+    border-bottom: 2px solid var(--red-500);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgb(179 179 179);
+}
+
+.protocol-item p {
+    color: var(--gray-600);
+}
+
+.protocol-item:hover {
+    transform: scale(1.05);
+}
+
+.protocol-item span {
+    font-size: 50px;
+}
+
+/* Status */
+.status-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--gray-600);
+}
+
+.bordered-status {
+    border-right: 3px dotted var(--yellow-500);
+}
+
+.circled-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.circled-status.online {
+    background: var(--success-color);
+}
+
+.circled-status.offline {
+    background: var(--error-color);
+}
+
+.list-status{
+    height: 300px;
+    overflow-y: auto;
+}
+
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+  
+.container-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+.container-checkbox input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.container-checkbox .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 9px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.status-content .input-filter {
+    padding: 5px 10px;
+    border: 2px solid var(--gray-500);
+    box-shadow: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: var(--gray-500);
+}
+
+.status-content .input-filter:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Consultas */
+.list-consultas{
+    height: 500px;
+    overflow-y: auto;
+    margin-bottom: 100px;
+}
+
+.list-consultas img{
+   width: 25px;
+   margin: 0 auto;
+   cursor: pointer;
+}
+
+/* Moldals */
+.modal table img{
+    width: 25px;
+    cursor: pointer;
+}

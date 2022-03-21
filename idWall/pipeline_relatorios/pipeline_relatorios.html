@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/5b18808a65.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Pipeline de Relatórios | Enterprise Connection</title>
+  </head>
+  <body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+          <div class="modal-content" style="background-color:#eeee;">
+              <div class=" modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Novo relatorio</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                  <div class="d-flex justify-content-around align-items-center mt-1 mb-5">
+                      <div>
+                          <h5>
+                              Selecione uma configuracao
+                          </h5>
+                      </div>
+                      <div style="border-bottom:solid 3px #deb2fd">
+                          <h5>Informe os dados</h5>
+                      </div>
+                      <div>
+                          <h5>Acompanhe os relatorios</h5>
+                      </div>
+                  </div>
+                  <div class="d-flex justify-content-around ">
+                      <div class="d-flex justify-content-around p-4 align-items-start" style="background-color:white;-webkit-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.22);
+                      -moz-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.22);
+                      box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.22);width: 50%;">
+                          <div>
+                            <div class="row">
+                              <div class="col-6">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <h6 class="mb-3">Data de nascimento*</h6>
+                                    <input type="date" class="w-100">
+                                  </div>
+                                  <div class="col-12">
+                                    <h6 class="mt-4">CPF*</h6>
+                                    <input type="text" class="w-100">
+                                  </div>
+                                </div>
+                              </div>
+                            
+                              <div class="col-6">
+                                <div>
+                                  <h6 class="mb-3">Nome completo*</h6>
+                                  <input type="text" class="w-100">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="d-flex justify-content-around"
+                          style="background-color:white;border-top:solid 3px #deb2fd;width: 30%;">
+                          <div class="mt-2 mb-2">
+                              <h5>Relatorio padrao PF</h5>
+                              <h6>Situacao Cadastro regular</h6>
+                              <h6>Antecedencia criminal</h6>
+                              <h6>Registro de dados no receita federal</h6>
+                              <h6>Processos no tribunal de justica</h6>
+                              <h6>Nome no receita federal</h6>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn-report-file" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span>Fechar</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="sidebar">
+      <div class="logo px-5 w-100 text-center my-4">
+          <img class="img-fluid" src="../monitor/assets/idwall-white-logo.png" alt="">
+      </div>
+
+      <ul class="main-menu ps-0 mt-5">
+          <li>Protocolos</li>
+          <li class="active">Documentos</li>
+          <li><a href="../usuario/usuario.html">Usuários</a></li>
+          <li>Fontes</li>
+          <li>Matrizes</li>
+          <li>Regras</li>
+          <li>Atributos</li>
+          <li><a href="../monitor/src/index.html">Monitor</a></li>
+          <li>Organizações</li>
+          <li>Sair</li>
+      </ul>
+    </div>
+    <div class="page-content">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="input-custom">
+              <label for="data_initial">Data inicial</label>
+              <div class="content">
+                <input id="data_initial" type="date" placeholder="Data inicial" />
+                <i class="fa-solid fa-calendar-day"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="input-custom">
+              <label for="data_final">Data final</label>
+              <div class="content">
+                <input id="data_final" type="date" placeholder="Data final" />
+                <i class="fa-solid fa-calendar-day"></i>
+              </div>
+            </div>
+          </div>
+  
+          <div
+            class="col-12 col-lg-4 mt-3 mt-lg-0 d-flex align-items-end justify-content-start justify-content-lg-end"
+          >
+            <button type="button" class="btn-report-file" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-solid fa-circle-plus"></i>
+              <span>Novo relatório</span>
+            </button>
+          </div>
+        </div>
+  
+        <div class="row g-2 mt-5">
+          <div class="col-12 col-md-6">
+            <div
+              class="card-status process"
+              data-type="process"
+              data-title="Processando"
+            >
+              <div class="info">
+                <i class="fa-solid fa-file-import"></i>
+                <p>1254</p>
+              </div>
+              <h2>Processando</h2>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card-status ok" data-type="ok" data-title="Tudo OK">
+              <div class="info">
+                <i class="fa-solid fa-file-circle-check"></i>
+                <p>366</p>
+              </div>
+              <h2>Tudo OK</h2>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div
+              class="card-status warning"
+              data-type="warning"
+              data-title="Devem ser revisados"
+            >
+              <div class="info">
+                <i class="fa-solid fa-file-circle-exclamation"></i>
+                <p>80</p>
+              </div>
+              <h2>Devem ser revisados</h2>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card-status total" data-type="total" data-title="Total">
+              <div class="info">
+                <i class="fa-solid fa-file-invoice"></i>
+                <p>1700</p>
+              </div>
+              <h2>Total</h2>
+            </div>
+          </div>
+        </div>
+        <p class="lastUpdate">Última atualização há 1 hora</p>
+      </section>
+  
+      <section class="container table-section table-responsive">
+        <h2 class="table-title">Tudo OK</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Última atualização</th>
+              <th scope="col"># de relatórios</th>
+              <th scope="col">CPF/CNPJ</th>
+              <th scope="col">Nome/Razão Social</th>
+              <th scope="col">Resultado</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">22/12/2022 12:30</th>
+              <td>3</td>
+              <td>500.333.999-11</td>
+              <td>Empresas poliar</td>
+              <td>Revisar</td>
+              <td>Ver mais</td>
+            </tr>
+            <tr>
+              <th scope="row">22/12/2022 12:30</th>
+              <td>3</td>
+              <td>500.333.999-11</td>
+              <td>Empresas poliar</td>
+              <td>Revisar</td>
+              <td>Ver mais</td>
+            </tr>
+            <tr>
+              <th scope="row">22/12/2022 12:30</th>
+              <td>3</td>
+              <td>500.333.999-11</td>
+              <td>Empresas poliar</td>
+              <td>Revisar</td>
+              <td>Ver mais</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
