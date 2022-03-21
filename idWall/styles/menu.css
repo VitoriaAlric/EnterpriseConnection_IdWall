@@ -1,0 +1,86 @@
+.navbar {
+    height: 60px;
+    background-color: #ffff !important;
+}
+.menu-button {
+    border: none;
+    padding-left: 2.4px;
+}
+.menu-button:focus {
+    box-shadow: none;
+}
+.sair-navbar {
+    background-color: rgba(255, 255, 255, 0.342);
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #5F04FC;
+}
+.sair-navbar:hover {
+    color: #a18fdf;
+    transition: .2s;
+}
+.svg-sair {
+    margin-right: 5px;
+}
+.sair-navbar-icon {
+    color: #5F04FC;
+} 
+.sidebar-nav {
+    width: 152px;
+    top: 60px;
+    height: calc(100% - var(60px));
+    background-color: #5F04FC;
+    padding: 0.5rem 0;
+}
+.sidebar-body {
+    padding: 1rem 0;
+}
+.sidebar-link {
+    color: #ffff !important;
+    padding: 0.5rem 1rem !important;
+}
+.dropdown-monitor {
+    background-color: #5F04FC;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-left: none;
+    border-right: none;
+}
+.dropdown-item {
+    color: #ffff;
+    padding: 0.5rem 1rem !important;
+}
+.dropdown-item:hover {
+    color: #262626;
+    background-color: #5F04FC;
+}
+.sidebar-link:hover,
+.active {
+    background-color: rgba(255, 255, 255, 0.644);
+    color: #5F04FC !important;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 120px;
+    padding-top: 60px;
+    background-color: #fafafa;
+}
+.content {
+    padding: 1rem 2rem;
+}
+header {
+    font-size: 1.7rem;
+    color: rgb(5, 2, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+button:hover path {
+    color: #8561ff;
+    transition: .2s;
+}
